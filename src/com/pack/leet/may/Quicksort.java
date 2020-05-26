@@ -1,11 +1,16 @@
-package com.pack;
+package com.pack.leet.may;
 
 import java.util.Arrays;
-
+/**
+ * 
+ * not working for input 5 2 3 1
+ * @author LordOfAll
+ *
+ */
 public class Quicksort {
 
 	public static void main(String[] args) {
-		int[] arr = {8, 9, 1 , 0, 3, 5};
+		int[] arr = {5, 2, 3, 1};
 		
 		
 		quicksort(arr, 0, arr.length-1);
@@ -38,8 +43,8 @@ public class Quicksort {
 		
 		while(i < j) {
 			
-			while (arr[i] < pivot) i++;
-			while (arr[j] >= pivot) j--;
+			while (arr[i] < pivot && i < hi) i++;
+			while (arr[j] >= pivot && j > pivot+1) j--;
 			
 			if(i < j) {
 				swap(arr, i, j);

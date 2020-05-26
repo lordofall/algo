@@ -1,0 +1,6 @@
+String str = "123";
+int sum = 0;
+sum = sum + '1';
+
+return sum;
+
