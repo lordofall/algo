@@ -15,7 +15,7 @@ Output: 3
 */
 public class Leet_26_LCS {
 
-	int[][] mem = null;
+	int[][] dp = null;
 	public static void main(String[] args) {
 		Leet_26_LCS obj = new Leet_26_LCS();
 		int[] A = new int[] {2,5,1,2,5};
@@ -26,8 +26,8 @@ public class Leet_26_LCS {
 	}
 
 	public int maxUncrossedLines(int[] A, int[] B) {
-		mem = new int[A.length][B.length];
-		for(int[] x: mem) {
+		dp = new int[A.length][B.length];
+		for(int[] x: dp) {
 			Arrays.fill(x, -1);
 		}
 		return maxUncrossedLines(A, B, 0, 0);
@@ -36,12 +36,12 @@ public class Leet_26_LCS {
 	private int maxUncrossedLines(int[] a, int[] b, int i, int j) {
 		if(i == a.length || j == b.length) return 0;
 		
-		if(mem[i][j] != -1) return mem[i][j];
+		if(dp[i][j] != -1) return dp[i][j];
 		
 		int result = 0;
 		if(a[i] == b[j]) result = 1 + maxUncrossedLines(a, b, i+1, j+1);
 		else result = Math.max(maxUncrossedLines(a, b, i+1, j), maxUncrossedLines(a, b, i, j+1));
-		mem[i][j] = result;
+		dp[i][j] = result;
 		return result;
 	}
 }

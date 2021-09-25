@@ -1,6 +1,2 @@
-String str = "123";
-int sum = 0;
-sum = sum + '1';
-
-return sum;
-
+java.time.Instant timeNew = java.time.Instant.now();
+timeNew = timeNew.truncatedTo(java.time.temporal.ChronoUnit.MINUTES);System.out.println(timeNew);String str = "abcd";str.substring(0, 250);An exception occurred during evaluation:  java.lang.StringIndexOutOfBoundsExceptionString rawString = "Entwickelnm, \"\"'' Sie mit Vergnügen";System.out.println(rawString.replaceAll("'","").replaceAll(",","").replaceAll("\"",""));29.3.21 17:1530.3.21 11:30java.util.Calendar c = java.util.Calendar.getInstance();java.util.Calendar c1 = (java.util.Calendar)c.clone();//c1.add(java.util.Calendar.MINUTE, 2);c1.set(java.util.Calendar.HOUR,22);c.set(java.util.Calendar.HOUR, 20);long start = c.getTimeInMillis();long end = c1.getTimeInMillis();System.out.println(Math.abs(start-end)); // 4 hours dailySystem.out.println(c.getTime()); // convert string to dateString sDate1="2021-03-30T12:00:00.000Z";  java.util.Date date1=new java.text.SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'").parse(sDate1);  System.out.println(sDate1+"\t"+date1);  
